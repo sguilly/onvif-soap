@@ -1,0 +1,39 @@
+{
+  "name": "onvif-soap",
+  "version": "0.0.0",
+  "description": "ONVIF CLIENT TO MANAGE CAMERA",
+  "homepage": "",
+  "repository": "sguilly/onvif-soap",
+  "author": {
+    "name": "Stéphane GUILLY",
+    "email": "stephane.guilly@gmail.com",
+    "url": ""
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "/lib/onvif-soap.js",
+  "keywords": [],
+  "devDependencies": {
+    "gulp": "^3.6.0",
+    "gulp-istanbul": "^0.8.1",
+    "gulp-jscs": "^1.1.0",
+    "gulp-jshint": "^1.5.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "jshint-stylish": "^1.0.0",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-babel": "^5.1.0",
+    "babel-core": "^5.5.0"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "locks": "^0.1.0",
+    "node-uuid": "^1.4.3",
+    "q": "^1.4.1",
+    "soap": "git+https://github.com/sguilly/node-soap.git"
+  }
+}
