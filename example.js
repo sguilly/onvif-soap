@@ -24,23 +24,20 @@ Cam.LoadWsdl(function () {
 
 
 
-    cam2.deviceCtrl('GetDeviceInformation').then(function (values) {
+    cam2.clientCtrl('device','GetDeviceInformation').then(function (values) {
       console.log(values);
     }).catch(function (error) {
       // Handle any error from all above steps
       console.log(error);
     });
-/*
-  cam1.deviceCtrl('GetServices').then(function (values) {
-    console.log(values);
-  });
-  */
 
-  cam1.mediaCtrl('GetProfiles').then(function (values) {
+
+
+  cam1.clientCtrl('media','GetProfiles').then(function (values) {
     //console.log(JSON.stringify(values,null,3));
     console.log(values.Profiles[0].attributes.token);
 
-    cam1.mediaCtrl('GetSnapshotUri',{ProfileToken: values.Profiles[0].attributes.token}).then(function (values) {
+    cam1.clientCtrl('media','GetSnapshotUri',{ProfileToken: values.Profiles[0].attributes.token}).then(function (values) {
       console.log(values);
     })
       .catch(function (error) {
@@ -54,6 +51,9 @@ Cam.LoadWsdl(function () {
     console.log(error);
   });
 
+  cam2.deviceCtrl('GetDeviceInformation').then(function (values) {
+    console.log(values);
+  });
 
 
 
